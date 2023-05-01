@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const SignUp = () => {
+const SignUp = ({navigation}: any) => {
   const screenDimensions = Dimensions.get('screen');
 
   return (
@@ -35,7 +35,7 @@ const SignUp = () => {
 
         <View className="gap-4">
           <View>
-            <Text>Name*</Text>
+            <Text className="text-base">Name*</Text>
             <TextInput
               className="border border-gray-[#BAC0CA] h-[50px] rounded-[6px] p-2"
               placeholder="John Hills"
@@ -43,7 +43,7 @@ const SignUp = () => {
           </View>
 
           <View>
-            <Text>Email*</Text>
+            <Text className="text-base">Email*</Text>
             <TextInput
               className="border border-gray-[#BAC0CA] h-[50px] rounded-[6px] p-2"
               placeholder="ybenson96@gmail.com"
@@ -51,15 +51,17 @@ const SignUp = () => {
           </View>
 
           <View>
-            <Text>Password*</Text>
+            <Text className="text-base">Password*</Text>
             <TextInput
               className="border border-gray-[#BAC0CA] h-[50px] rounded-[6px] p-2"
               placeholder="************"
             />
           </View>
 
-          <View className="mt-4">
-            <TouchableOpacity className="bg-green h-[50px] flex items-center justify-center rounded-[6px] py-[13px] px-[24px]">
+          <View className="mt-20">
+            <TouchableOpacity
+              onPress={() => navigation.navigate('VerifyEmail')}
+              className="bg-green h-[50px] flex items-center justify-center rounded-[6px] py-[13px] px-[24px]">
               <Text className="text-white font-bold">Register</Text>
             </TouchableOpacity>
           </View>
