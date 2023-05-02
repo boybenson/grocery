@@ -4,11 +4,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignUp from './src/screens/Auth/SignUp/SignUp';
 import VerifyEmail from './src/screens/Auth/VerifyEmail/VerifyEmail';
 import SignUpSuccess from './src/screens/Auth/SignUpSuccess/SignUpSuccess';
+import Home from './src/screens/Home/Home';
 
 type RootStackParamList = {
   SignUp: undefined;
   VerifyEmail: undefined;
   SignUpSuccess: undefined;
+  Home: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -29,6 +31,11 @@ const App = () => {
         <Stack.Screen
           name="SignUpSuccess"
           component={SignUpSuccess}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

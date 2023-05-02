@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const SignUpSuccess = () => {
+const SignUpSuccess = ({navigation}: any) => {
   const screenDimensions = Dimensions.get('screen');
 
   return (
@@ -29,7 +29,7 @@ const SignUpSuccess = () => {
           </View>
 
           <TouchableOpacity
-            //   onPress={() => navigation.navigate('SignUpSuccess')}
+            onPress={() => navigation.navigate('Home')}
             className="bg-green mt-3 w-full h-[50px] flex items-center justify-center rounded-[6px] py-[13px] px-[24px]">
             <Text className="text-white font-bold">Continue</Text>
           </TouchableOpacity>
